@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -7,7 +8,7 @@ module.exports = {
         "dev-server": './src/dev-server'
     },
     output: {
-        libraryTarget: 'umd',
+        // libraryTarget: 'umd',
         filename: '[name].js'
     },
     module: {
@@ -37,5 +38,11 @@ module.exports = {
     },
     resolve: {
         extensions: [ '.js', '.ts', '.tsx' ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            chunks: [ 'dev-server' ]
+        }),
+    ]
 }

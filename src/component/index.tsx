@@ -1,4 +1,7 @@
+import Openseadragon from 'openseadragon';
 import * as React from 'react';
+
+Openseadragon();
 
 export interface OpenSeadragonComponentProps {
     url: string;
