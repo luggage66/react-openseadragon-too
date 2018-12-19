@@ -38,3 +38,5 @@ jspm_packages
 
 # built js
 dist/
+
+.cache-loader/
