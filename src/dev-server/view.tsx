@@ -27,14 +27,9 @@ import OpenSeadragonComponent from '../component';
 
 export default class TestPageView extends React.Component {
     public render() {
-        return <div>
-            <OpenSeadragonComponent
-                url="http://localhost:8182/iiif/2/space.jpg/info.json"
-                containerStyle={{
-                    height: '500px',
-                    width: '500px'
-                }}
-            />
-        </div>;
+        return <OpenSeadragonComponent
+            className="documentContainer"
+            url="http://localhost:8182/iiif/2/space.jpg/info.json"
+        />;
     }
 }
